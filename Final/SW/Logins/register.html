@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css" />
+  </head>
+  <body>
+    <div class="register-container">
+      <h2 class="register-head">Create an Account</h2>
+      <form id="registerForm">
+        <!-- Name Field -->
+        <div class="input-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <!-- Email, Password, Role -->
+        <div class="input-group">
+          <label for="email">Email:</label>
+          <input id="email" name="email" required />
+        </div>
+        <div class="input-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div class="input-group">
+          <label for="confirmPassword">Confirm Password:</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="role">Role:</label>
+          <select id="role" name="role" required>
+            <option value="Admin">Admin</option>
+            <option value="Doctor">Doctor</option>
+            <option value="Nurse">Nurse</option>
+            <option value="Diagnostic">Diagnostic</option>
+          </select>
+        </div>
+
+        <!-- Doctor-Specific Fields -->
+        <div id="doctorFields" style="display: none">
+          <div class="input-group">
+            <label for="specialization">Specialization:</label>
+            <input type="text" id="specialization" name="specialization" />
+          </div>
+          <div class="input-group">
+            <label for="opdTimings">OPD Timings:</label>
+            <input type="text" id="opdTimings" name="opdTimings" />
+          </div>
+          <div class="input-group">
+            <label for="ipdTimings">IPD Timings:</label>
+            <input type="text" id="ipdTimings" name="ipdTimings" />
+          </div>
+          <div class="input-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+        </div>
+
+        <!-- Nurse-Specific Fields -->
+        <div id="nurseFields" style="display: none">
+          <div class="input-group">
+            <label for="shiftHours">Shift Hours:</label>
+            <input type="text" id="shiftHours" name="shiftHours" />
+          </div>
+          <div class="input-group">
+            <label for="wardNumber">Ward Number:</label>
+            <input type="text" id="wardNumber" name="wardNumber" />
+          </div>
+        </div>
+
+        <button type="submit" class="register-btn">Register</button>
+        <p id="message" class="error-message"></p>
+      </form>
+    </div>
+    <script src="register.js"></script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <ul class="menu">
+          <li class="menu-item active">Dashboard</li>
+          <li class="menu-item" onclick="openAddPatient()">Add Patient</li>
+          <li class="menu-item logout" onclick="openSignIn()">LOGOUT</li>
+        </ul>
+        <div class="hotline">
+          <p><strong>Emergency Hotline:</strong></p>
+          <p>📞 +91-999 999 9999</p>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Tabs for switching between IPD Patients, OPD Patients, Doctors, Nurses -->
+        <div class="patient-buttons">
+          <button id="opdButton" class="patient-btn selected">OPD Patients</button>
+          <button id="ipdButton"
+          class="patient-btn" >IPD Patients</button>
+          <button id="doctorButton"
+          class="patient-btn" >Doctors</button>
+          <button id="nurseButton"  class="patient-btn">Nurses</button>
+        </div>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody id="patientsTable">
+              <!-- Patient rows will be injected here -->
+            </tbody>
+          </table>
+        </div>
+      
+    </div>
+    <script src="dashboard.js"></script>
+  </body>
+</html>

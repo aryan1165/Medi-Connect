@@ -1,0 +1,112 @@
+/* OTP Verification Page Styles */
+
+/* General Reset and Font Import */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+/* Body and Container Styling */
+body,
+html {
+  height: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reset-container {
+  width: 500px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Header and Text */
+.reset-password-head {
+  font-size: 34px;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.new-password-label {
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.reset-message {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+.resend-link {
+  color: #1a6291;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Input Groups */
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* OTP Input Styling */
+.otp-input-group {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.otp-input {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.otp-input:focus {
+  border-color: #358ec7;
+  outline: none;
+}
+
+/* Buttons */
+.reset-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #358ec7;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reset-btn:hover {
+  background-color: #1a6291;
+}

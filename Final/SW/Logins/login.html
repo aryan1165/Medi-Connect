@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
+  
+
+</head>
+<body>
+  <div class="login-container">
+    <p class="welcome">WELCOME</p>
+    <p class="signin">Sign in</p>
+
+    <form id="loginForm">
+      <div class="input-group">
+        <label for="email">Enter your mobile number or email ID</label>
+        <input type="text" id="email" placeholder="mobile number or email ID" required>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Enter your Password</label>
+        <input type="password" id="password" placeholder="Password" required>
+      </div>
+
+      <div class="role-selection">
+        <label><input type="radio" name="role" value="Doctor" checked> Doctor</label>
+        <label><input type="radio" name="role" value="Nurse"> Nurse</label>
+        <label><input type="radio" name="role" value="Admin"> Admin</label>
+        <label><input type="radio" name="role" value="Diagnostic"> Diagnostic</label>
+      </div>
+
+      <p id="errorMessage" class="error-message"></p>
+      <div id="lower">
+        <a href="reset-password.html" class="reset-password">Reset Password</a>
+        <a href="register.html" class="reset-password">Create Account</a>
+      </div>
+      
+      <button type="submit" class="sign-in-btn">Sign In</button>
+    </form>
+  </div>
+</body>
+<script src="login.js"></script>
+</html>

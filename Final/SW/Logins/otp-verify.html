@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP Verification</title>
+    <link rel="stylesheet" href="otp-verify.css" />
+  </head>
+  <body>
+    <div class="reset-container">
+      <p class="reset-password-head">Reset Password</p>
+      <p class="new-password-label">Enter your email ID or Mobile Number</p>
+
+      <form id="otpForm">
+        <!-- Email Display (Disabled) -->
+        <div class="input-group">
+          <input
+            type="text"
+            id="email"
+            placeholder="Email ID / Mobile Number"
+            disabled
+          />
+        </div>
+
+        <p class="reset-message">
+          We have sent you a message with the authentication code.
+        </p>
+
+        <!-- OTP Input Boxes -->
+        <div class="otp-input-group">
+          <input type="text" class="otp-input" maxlength="1" data-index="0" />
+          <input type="text" class="otp-input" maxlength="1" data-index="1" />
+          <input type="text" class="otp-input" maxlength="1" data-index="2" />
+          <input type="text" class="otp-input" maxlength="1" data-index="3" />
+          <input type="text" class="otp-input" maxlength="1" data-index="4" />
+          <input type="text" class="otp-input" maxlength="1" data-index="5" />
+        </div>
+
+        <p class="reset-message">
+          Didn’t receive code?
+          <span id="resendCode" class="resend-link">Resend Code</span>
+        </p>
+
+        <button type="button" id="verifyOtpBtn" class="reset-btn">
+          Verify OTP
+        </button>
+
+        <p id="errorMessage" class="error-message"></p>
+      </form>
+    </div>
+
+    <script src="otp-verify.js"></script>
+  </body>
+</html>

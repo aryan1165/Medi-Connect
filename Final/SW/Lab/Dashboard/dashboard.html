@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nurse Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <ul class="menu">
+          <li class="menu-item active">DASHBOARD</li>
+          <li class="menu-item logout" onclick="openSignIn()">LOGOUT</li>
+        </ul>
+        <div class="hotline">
+          <p><strong>Emergency Hotline:</strong></p>
+          <p>📞 +91-999 999 9999</p>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <div class="welcome-section">
+          <div class="welcome-content">
+            <h2 id="nurseName">WELCOME LAB ADMIN!</h2>
+            <!-- <p>Shift Hours: <strong id="shiftHours">N/A</strong></p>
+            <p>Ward Number: <strong id="wardNumber">N/A</strong></p> -->
+          </div>
+        </div>
+
+        <!-- Investigation Search -->
+        <!-- <div class="search-section">
+          <input
+            type="text"
+            id="investigationSearchInput"
+            placeholder="Enter Investigation Type (e.g., Blood Test)"
+          />
+          <button id="investigationSearchBtn">Search</button>
+        </div> -->
+
+        <!-- Patients Table -->
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <!-- <th>Visit No.</th> -->
+                <th>Chief Complaint</th>
+                <th>Age</th>
+                <th>Sex</th>
+                <th>Investigations</th>
+                <!-- <th>Timings</th> -->
+              </tr>
+            </thead>
+            <tbody id="patientsTable">
+              <!-- Patient rows will be dynamically injected -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>

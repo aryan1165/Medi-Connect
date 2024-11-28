@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Profile</title>
+    <link rel="stylesheet" href="add-report.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <ul class="menu">
+          <li class="menu-item active">PATIENT</li>
+          <li class="menu-item" onclick="openDashboard()">DASHBOARD</li>
+          
+          <li class="menu-item logout" onclick="openSignIn()">LOGOUT</li>
+        </ul>
+        <div class="hotline">
+          <p><strong>Emergency Hotline:</strong></p>
+          <p>📞 +91-999 999 9999</p>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <div class="patient-overview">
+          <div class="profile">
+
+            <div class="info">
+              <h2 id="patientName">Arjun Sharma</h2>
+              <p id="patientDetails">34 yrs | Male</p>
+            </div>
+          </div>
+
+          <div class="vl"></div>
+
+          <div class="patient-details">
+            <p>
+              <strong>Blood Group</strong> <span id="bloodGroup">B +ve</span>
+            </p>
+            <p>
+              <strong>Contact Number</strong>
+              <span id="contactNumber">9995 999 999</span>
+            </p>
+            <p><strong>Height</strong> <span id="height">175 cm</span></p>
+            <p><strong>Weight</strong> <span id="weight">69 kg</span></p>
+            <p>
+              <strong>Chief Complaint</strong>
+              <span id="chiefComplaint" class="chief-complaint">
+                <span class="tag">Diabetic</span>
+                <span class="tag">Hypertension</span>
+              </span>
+            </p>
+            <p>
+              <strong>Last Visited on</strong>
+              <span id="lastVisited">13th Aug 2024</span>
+            </p>
+          </div>
+
+          <div class="vitals">
+            <div class="vital-sign" id="bloodPressure">
+              <p>Blood Pressure</p>
+              <p>141/90 mmHg</p>
+            </div>
+            <div class="vital-sign" id="temperature">
+              <p>Temperature</p>
+              <p>98.6°F</p>
+            </div>
+            <div class="vital-sign" id="spO2">
+              <p>SP O2</p>
+              <p>96%</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Investigation Section -->
+        <div class="section">
+          <h3>INVESTIGATION</h3>
+          <div id="added-investigations" class="added-items"></div>
+        </div>
+
+        <!-- File Upload Section -->
+        <div class="section">
+          <h3>Upload Files</h3>
+          <div class="file-upload" onclick="triggerFileInput()">
+            <input type="file" id="file-input" multiple style="display: none" />
+            <p>Drag and drop files here or click to select files</p>
+          </div>
+          <div id="uploaded-files" class="uploaded-files-list"></div>
+          <button id="save-button" onclick="saveData()">Save</button>
+        </div>
+      </div>
+    </div>
+    <script src="add-reprt.js"></script>
+  </body>
+</html>

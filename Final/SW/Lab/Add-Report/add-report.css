@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  overflow: hidden; /* Prevent page scrolling */
+  background-color: #f5f5f5;
+}
+
+.container {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fff1f1;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 250px;
+  background-color: #e3f2fd;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu {
+  list-style: none;
+  margin-top: 100px;
+}
+
+.menu-item {
+  padding: 15px 10px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.menu-item.active {
+  background-color: #b7def6;
+}
+
+.menu-item.logout {
+  color: red;
+}
+
+.menu-item:hover {
+  background-color: #b7def6;
+}
+
+.hotline {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.patient-overview {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info {
+  margin-top: 5px;
+}
+
+.vl {
+  border-left: 2px solid rgb(174, 187, 174);
+  height: 100px;
+}
+
+.patient-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.patient-details p {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.8;
+}
+
+.patient-details p strong {
+  min-width: 250px;
+}
+
+.chief-complaint .tag {
+  background-color: #e0e0e0;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  color: #060505;
+  margin-right: 5px;
+}
+
+.vitals {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.vital-sign {
+  width: 200px;
+  background-color: #ffe5e5;
+  padding: 8px;
+  border-radius: 4px;
+  text-align: center;
+  color: #d9534f;
+  font-weight: bold;
+}
+
+/* Section styling */
+.section {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Investigation List */
+.added-items {
+  width: 100%;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 10px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.added-items div {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.added-items div:last-child {
+  border-bottom: none;
+}
+
+.delete-button {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 3px 8px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.delete-button:hover {
+  background-color: #c9302c;
+}
+
+/* File Upload Section Styling */
+.file-upload {
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  color: #888;
+  cursor: pointer;
+}
+
+.file-upload:hover {
+  border-color: #b7def6;
+  background-color: #f0f8ff;
+}
+
+/* Uploaded Files List Styling */
+.uploaded-files-list {
+  margin-top: 10px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.uploaded-files-list div {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  font-size: 13px;
+}
+
+.uploaded-files-list div:last-child {
+  border-bottom: none;
+}
+
+/* Save Button Styling */
+#save-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #e3f2fd;
+  border: 2px solid rgb(174, 187, 174);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+#save-button:hover {
+  background-color: #b7def6;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <ul class="menu">
+          <li class="menu-item active">DASHBOARD</li>
+          <li class="menu-item logout" onclick="openSignIn()">LOGOUT</li>
+        </ul>
+        <div class="hotline">
+          <p><strong>Emergency Hotline:</strong></p>
+          <p>📞 +91-999 999 9999</p>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <div class="merged-section">
+          <!-- Welcome Content -->
+          <div class="welcome-content">
+            <h2 id="doctorName">WELCOME DR. NAME!</h2>
+            <p>Specialization: <strong id="specialization">N/A</strong></p>
+            <p>Phone Number: <strong id="phone">N/A</strong></p>
+            <p>
+              Total No. of OPD Appointments Today:
+              <strong id="opdCount">N/A</strong>
+            </p>
+            <p>OPD Round Timings: <strong id="opdTimings">N/A</strong></p>
+            <p>
+              Total No. of IPD Appointments Today:
+              <strong id="ipdCount">N/A</strong>
+            </p>
+            <p>IPD Round Timings: <strong id="ipdTimings">N/A</strong></p>
+
+            <!-- <p>Total No. of Surgeries Scheduled: <strong id="surgeryCount">N/A</strong></p>
+            <p>Timings of the Surgery: <strong id="surgeryTimings">N/A</strong></p> -->
+          </div>
+
+          <!-- Chart Container -->
+          <div class="chart-container">
+            <canvas id="patientChart"></canvas>
+          </div>
+        </div>
+        <div class="patient-buttons">
+          <button id="opdButton" class="patient-btn">
+            OPD Patient
+          </button>
+          <button id="ipdButton" class="patient-btn selected">IPD Patient</button>
+        </div>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Visit No.</th>
+                <th>Chief Complaint</th>
+                <th>Age</th>
+                <th>Sex</th>
+                <th>Timings</th>
+              </tr>
+            </thead>
+            <tbody id="patientsTable">
+              <!-- Patient rows will be injected here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="dashboard.js"></script>
+  </body>
+</html>

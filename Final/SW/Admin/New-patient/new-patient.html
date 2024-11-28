@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Patient Form</title>
+  <link rel="stylesheet" href="new-patient.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <ul class="menu">
+        <li class="menu-item active">PATIENT</li>
+        <li class="menu-item " onclick="openDashboard()">DASHBOARD</li>
+
+        <li class="menu-item logout" onclick="openSignIn()">LOGOUT</li>
+      </ul>
+      <div class="hotline">
+        <p><strong>Emergency Hotline:</strong></p>
+        <p>📞 +91-999 999 9999</p>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <header class="header">
+        <div class="header-left">
+          <h1 class="title">New Patient</h1>
+        </div>
+      </header>
+
+      <div class="form-container">
+        <form id="patientForm" class="patient-form">
+          <div class="form-row">
+            <div class="form-group0">
+              <label for="patientName">Patient Name (*)</label>
+              <input type="text" id="patientName" required />
+            </div>
+
+            <div class="form-group0">
+              <label for="dob">Date of Birth (*)</label>
+              <input type="date" id="dob" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group0">
+              <label for="bloodGroup">Blood Group (*)</label>
+              <input type="text" id="bloodGroup" />
+            </div>
+
+            <div class="form-group0">
+              <label for="category">Sex (*)</label>
+              <select id="category" required>
+                <option value="">--Please choose an option--</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group0">
+              <label for="email">Email ID (*)</label>
+              <input type="email" id="email" required />
+            </div>
+
+            <div class="form-group0">
+              <label for="mobileNumber">Mobile Number (*)</label>
+              <input type="text" id="mobileNumber" required />
+            </div>
+          </div>
+
+          <div class="form-row0">
+            <div class="form-group">
+              <label for="height">Height</label>
+              <input type="text" id="height" />
+            </div>
+
+            <div class="form-group">
+              <label for="weight">Weight</label>
+              <input type="text" id="weight" />
+            </div>
+          </div>
+
+          <!-- New fields for Visit No, Chief Complaint, and Timings -->
+          <div class="form-row">
+            <div class="form-group0">
+              <label for="visitNo">Visit No (*)</label>
+              <input type="text" id="visitNo" required />
+            </div>
+
+            <div class="form-group0">
+              <label for="chiefComplaint">Chief Complaint (*)</label>
+              <input type="text" id="chiefComplaint" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group0">
+              <label for="timings">Timings (*)</label>
+              <input type="text" id="timings" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group0">
+              <label for="type">Patient Type (*)</label>
+              <select id="type" required>
+                <option value="">--Select Type--</option>
+                <option value="OPD">OPD</option>
+                <option value="IPD">IPD</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="new-patient.js"></script>
+</body>
+</html>
